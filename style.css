@@ -1,0 +1,302 @@
+/*
+=========================================
+HABIT TRACKER PROJECT
+
+CSS Concepts Demonstrated
+
+✓ Universal Selector
+✓ Element Selectors
+✓ Class Selectors
+✓ ID Selectors
+✓ Box Model
+✓ Flexbox
+✓ Hover Effects
+✓ Transitions
+✓ Border Radius
+✓ Responsive Design
+✓ Pseudo Classes
+
+Theme:
+Dark
+
+=========================================
+*/
+
+/*
+=========================================
+CSS RESET
+Universal Selector
+Removes default browser spacing.
+=========================================
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*
+=========================================
+BODY STYLING
+Background Colors
+Typography
+Creates dark theme.
+=========================================
+*/
+
+body {
+    background-color: #111111;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+    padding: 30px;
+}
+/*
+=========================================
+MAIN CONTAINER
+Width
+Margin Auto
+Layout Control
+Centers all content.
+=========================================
+*/
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+/*
+=========================================
+HEADER
+Text Alignment
+Margins
+Displays application title neatly.
+=========================================
+*/
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    color: #f4c430;
+    margin-bottom: 20px;
+}
+/*
+=========================================
+SUMMARY SECTION
+Flexbox
+Gap
+Cards
+Displays statistics cards.
+=========================================
+*/
+
+.summary {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.summary p {
+    background-color: #1b1b1b;
+    padding: 15px 20px;
+    border-radius: 10px;
+    border: 1px solid #333;
+}
+/*
+=========================================
+FORM SECTION
+- Backgrounds
+- Padding
+- Border Radius
+Creates card-style form layout.
+=========================================
+*/
+
+.form-section {
+    background-color: #1b1b1b;
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+}
+.form-section h2 {
+    margin-bottom: 20px;
+    color: #f4c430;
+}
+/*
+=========================================
+FORM GROUPS
+Spacing
+Separates form controls.
+=========================================
+*/
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+/*
+=========================================
+LABELS
+Makes labels easier to read.
+=========================================
+*/
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+/*
+=========================================
+FORM INPUTS
+Width 
+Borders
+Padding
+Creates consistent form controls.
+=========================================
+*/
+
+input,
+select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #444;
+    background-color: #222;
+    color: white;
+}
+/*
+=========================================
+BUTTON STYLING
+Hover Effects
+Transitions
+Creates interactive button.
+=========================================
+*/
+
+button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    background-color: #f4c430;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+/*
+=========================================
+BUTTON HOVER
+Pseudo Classes
+Provides user feedback.
+=========================================
+*/
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 15px #f4c430;
+}
+/*
+=========================================
+ERROR MESSAGE
+Highlights validation errors.
+=========================================
+*/
+
+#errorMessage {
+    color: #ff4d4d;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/*
+=========================================
+HABIT SECTION
+Contains generated habits.
+=========================================
+*/
+
+.habit-section {
+    margin-top: 20px;
+}
+
+.habit-section h2 {
+    color: #f4c430;
+    margin-bottom: 20px;
+}
+/*
+=========================================
+HABIT LIST
+CSS Grid
+Displays habit cards neatly.
+=========================================
+*/
+
+#habitList {
+    display: grid;
+    gap: 15px;
+}
+/*
+=========================================
+HABIT CARD
+Cards
+Borders
+Flexbox
+Displays individual habits.
+=========================================
+*/
+
+.habit-card {
+    background-color: #1b1b1b;
+    padding: 20px;
+    border-radius: 12px;
+    border-left: 4px solid #f4c430;
+}
+.habit-card h3 {
+    color: #f4c430;
+    margin-bottom: 10px;
+}
+
+.habit-card p {
+    margin-bottom: 8px;
+}
+/*
+=========================================
+COMPLETED HABIT
+Classes
+Text Decoration
+Visually distinguishes completed habits.
+=========================================
+*/
+
+.completed {
+    opacity: 0.7;
+    text-decoration: line-through;
+}
+
+
+/*
+=========================================
+RESPONSIVE DESIGN
+Media Queries
+Improves mobile layout.
+=========================================
+*/
+
+@media (max-width: 768px) {
+
+    .summary {
+        flex-direction: column;
+    }
+
+    .summary span {
+    color: #f4c430;
+    font-weight: bold;
+
+}
+
+}

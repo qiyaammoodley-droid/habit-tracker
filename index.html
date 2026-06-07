@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habit Tracker</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!--
+=========================================
+Main container
+HTML Div Containers
+Wraps all content on the page and keeps
+the layout organised.
+=========================================
+-->
+<div class="container">
+
+    <!--
+=========================================
+Header Section
+Semantic HTML
+Displays the application title and
+summary statistics.
+=========================================
+-->
+<header>
+
+    <h1>🦇 Habit Tracker</h1>
+<!--
+=========================================
+Summary Section
+Paragraph Elements
+Span Elements
+IDs
+Displays total habits, habits completed,
+and completion percentage.
+JavaScript updates these values later.
+=========================================
+-->
+    <div class="summary">
+        <p>Total Habits: <span id="totalHabits">0</span></p>
+        <p>Done Today: <span id="doneToday">0</span></p>
+        <p>Completion: <span id="completion">0%</span></p>
+    </div>
+</header>
+
+<section class="form-section">
+
+    <h2>Add New Habit</h2>
+
+    <form id="habitForm">
+        <!--
+=========================================
+Text input
+Labels
+Text Inputs
+Allows users to enter a habit name.
+=========================================
+-->
+<div class="form-group">
+    <label for="habitName">Habit Name</label>
+
+    <input
+        type="text"
+        id="habitName"
+        placeholder="Enter habit name"
+    >
+</div>
+<!--
+=========================================
+Number inputs
+Labels
+Number Inputs
+Allows users to choose how many days
+per week they want to complete the habit.
+=========================================
+-->
+<div class="form-group">
+    <label for="habitTarget">
+        Target Days Per Week
+    </label>
+
+    <input
+        type="number"
+        id="habitTarget"
+        min="1"
+        max="7"
+    >
+</div>
+<div class="form-group">
+
+    <label for="habitCategory">
+        Category
+    </label>
+
+    <select id="habitCategory">
+
+        <option value="">
+            Select Category
+        </option>
+
+        <option value="Fitness">
+            Fitness
+        </option>
+
+        <option value="Health">
+            Health
+        </option>
+
+        <option value="Learning">
+            Learning
+        </option>
+
+        <option value="Productivity">
+            Productivity
+        </option>
+
+        <option value="Personal">
+            Personal
+        </option>
+
+    </select>
+
+</div>
+<!--
+=========================================
+Submit button
+Button Element
+Submits the form and triggers
+JavaScript validation.
+=========================================
+-->
+<button type="submit">
+    Add Habit
+</button>
+<!--
+=========================================
+Erro message 
+Paragraph Element
+IDs
+Displays validation errors without using
+alert() messages.
+=========================================
+-->
+<p id="errorMessage"></p>
+    </form>
+</section>
+<!--
+=========================================
+Habit Display Section
+Semantic Sections
+Dynamic Content
+JavaScript generates habit cards here.
+The container starts empty.
+=========================================
+-->
+<section class="habit-section">
+
+    <h2>Your Habits</h2>
+<!--
+=========================================
+Dynamic habit list
+DOM Manipulation
+Stores all generated habit cards.
+JavaScript creates and inserts content
+inside this container.
+=========================================
+-->
+    <div id="habitList">
+
+    </div>
+
+</section>
+</div>
+    <script src="script.js"></script>
+</body>
+</html>
